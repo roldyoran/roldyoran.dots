@@ -34,4 +34,4 @@ Cada directorio contiene las configuraciones específicas para cada herramienta.
 
 ---
 
-*Personaliza tu entorno de desarrollo con estas configuraciones probadas y optimizadas.*
+*Personaliza tu entorno de desarrollo con estas configuraciones de **roldyoran***

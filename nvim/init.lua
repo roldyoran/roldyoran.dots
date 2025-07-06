@@ -5,13 +5,14 @@ vim.opt.termguicolors = true
 vim.cmd("syntax on")
 vim.opt.fillchars = { eob = " " }
 vim.opt.background = "dark"  -- Fuerza modo oscuro
+vim.opt.clipboard = 'unnamedplus'  -- Comparte el portapapeles con el sistema
 
 -- 2. Configuración del tema onedark.nvim (ANTES de cargar el colorscheme)
 require('onedark').setup({
-    style = 'darker',          -- Estilo principal
-    transparent = true,      -- ¡Fondo transparente!
-    term_colors = true,      -- Colores en terminal integrado
-    ending_tildes = false,   -- Oculta ~ al final del buffer
+    style = 'darker',          	-- Estilo principal
+    transparent = true,      	-- ¡Fondo transparente!
+    term_colors = true,      	-- Colores en terminal integrado
+    ending_tildes = false,   	-- Oculta ~ al final del buffer
 })
 
 -- 3. Cargar el tema (esto aplica la configuración)
@@ -29,3 +30,19 @@ require("nvim-treesitter.configs").setup({
   ensure_installed = { "python", "javascript", "go", "lua", "rust", "bash" },
   highlight = { enable = true },
 })
+
+-- 6. Atajos de teclado para copiar/pegar (opcional pero recomendado)
+local keymap = vim.keymap.set
+
+-- Copiar al portapapeles del sistema
+keymap('v', '<C-c>', '"+y', { desc = 'Copiar al portapapeles del sistema' })
+keymap('n', '<leader>y', '"+y', { desc = 'Copiar al portapeles del sistema' })
+
+-- Pegar desde el portapapeles del sistema
+keymap('n', '<C-v>', '"+p', { desc = 'Pegar desde el portapapeles del sistema' })
+keymap('v', '<C-v>', '"+p', { desc = 'Pegar desde el portapapeles del sistema' })
+
+-- Cortar al portapapeles del sistema
+keymap('v', '<C-x>', '"+d', { desc = 'Cortar al portapapeles del sistema' })
+
+
