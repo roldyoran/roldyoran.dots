@@ -1,4 +1,5 @@
 -- ~/.config/nvim/init.lua
+-- git clone https://github.com/navarasu/onedark.nvim ~/.local/share/nvim/site/pack/themes/start/onedark.nvim
 -- 1. Configuración básica de Neovim (siempre al inicio)
 vim.opt.number = true  			-- Numeros de linea
 vim.opt.termguicolors = true		-- Colores de terminal	
