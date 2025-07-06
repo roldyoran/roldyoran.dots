@@ -7,8 +7,10 @@ vim.opt.fillchars = { eob = " " }	-- Quitar virgurillas
 vim.opt.background = "dark"  -- Fuerza modo oscuro
 vim.opt.clipboard = 'unnamedplus'  -- Comparte el portapapeles con el sistema
 -- Quitar scroll demas al final del doc
-vim.keymap.set('n', '<ScrollWheelDown>', '<C-d>zz', { noremap = true, silent = true })
-vim.keymap.set('n', '<ScrollWheelUp>', '<C-u>zz', { noremap = true, silent = true })
+-- Configuración de scroll
+vim.opt.scrolloff = 5          -- Líneas de margen vertical
+vim.opt.sidescrolloff = 5      -- Líneas de margen horizontal
+vim.opt.mousescroll = "ver:1"  -- Scroll suave con mouse (1 línea a la vez)
 
 -- 2. Configuración del tema onedark.nvim (ANTES de cargar el colorscheme)
 require('onedark').setup({
