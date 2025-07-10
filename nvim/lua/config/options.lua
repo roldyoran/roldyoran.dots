@@ -7,7 +7,7 @@
 vim.opt.relativenumber = false -- Desactiva números relativos
 
 vim.opt.guicursor = table.concat({
-  "n-v-c-i:ver25-Cursor", -- Línea vertical en Normal, Visual y Comando
+  "v-c-i:ver25-Cursor", -- Línea vertical en Normal, Visual y Comando
   --- "i-ci-ve:block-Cursor", -- Bloque en Insertar (opcional, cámbialo si prefieres otra forma)
   "r-cr:hor20-Cursor", -- Línea horizontal en Replace
 }, ",")
